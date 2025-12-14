@@ -1,0 +1,145 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #121212; 
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+}
+
+
+
+/* Fullscreen wrapper */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Content centered and animated */
+.login-content {
+    max-width: 600px;
+    width: 100%;
+    animation: floatUp 1.2s ease-out;
+}
+
+/* Firebase style big heading */
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #FFA000, #FF6F00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+/* Subtext */
+.subtitle {
+    font-size: 1.1rem;
+    color: #B12C00;
+    margin-bottom: 40px;
+}
+
+/* Form styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Input fields */
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 80%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #1E1E1E;
+    color: #FFF;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.login-form input:focus {
+    background: #2C2C2C;
+    box-shadow: 0 0 10px #FF6F00;
+}
+
+/* Role selection buttons */
+.role-select {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.role-btn {
+    padding: 10px 20px;
+    border: 2px solid #FF6F00;
+    border-radius: 50px;
+    background: transparent;
+    color: #FFB300;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.role-btn:hover {
+    background: #FF6F00;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 111, 0, 0.8);
+}
+
+.role-btn.active {
+    background: linear-gradient(45deg, #FFA000, #FF6F00);
+    color: #fff;
+    box-shadow: 0 0 30px rgba(255, 167, 38, 0.9);
+}
+
+/* Submit button */
+.submit-btn {
+    width: 50%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #FFA000, #FF6F00);
+    color: #121212;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 111, 0, 0.9);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes floatUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes glowText {
+    from { text-shadow: 0 0 10px #FF6F00, 0 0 20px #FFA000; }
+    to { text-shadow: 0 0 20px #FF6F00, 0 0 40px #FFA000; }
+}

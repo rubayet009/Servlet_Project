@@ -1,0 +1,6 @@
+<Context>
+    <Environment name="MONGODB_URI"
+                 value="mongodb+srv://rubayet008:mongo008@cluster0.xfufsrx.mongodb.net/?retryWrites=true&amp;w=majority&amp;appName=Cluster0"
+                 type="java.lang.String"
+                 override="false"/>
+</Context>
